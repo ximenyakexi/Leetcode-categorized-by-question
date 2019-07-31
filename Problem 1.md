@@ -22,3 +22,4 @@ class Solution:
                 if nums[i] + nums[j] == target:
                     return [i, j]  
 ```
+Time complexity: O(n^2), Space complexity: O(1)
