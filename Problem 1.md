@@ -23,3 +23,20 @@ class Solution:
                     return [i, j]  
 ```
 Time complexity: O(n^2), Space complexity: O(1)
+
+**Method 2. Dictionary(Hashmap)**
+
+Look-up in dictionary is O(1). This saves searching time. However, the prerequisite is that no two elements are the same.
+
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        map = {}
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in map:
+                return [map[complement], i]
+            map[nums[i]] = i
+    
+```
+Time complexity: O(n), Space complexity: O(n)
